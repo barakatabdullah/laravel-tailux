@@ -1,5 +1,4 @@
 // Import Dependencies
-import { Outlet, ScrollRestoration } from "react-router";
 import { lazy } from "react";
 
 // Local Imports
@@ -23,7 +22,6 @@ function Root({children}) {
   return (
     <>
       {/*<Progress />*/}
-      {/*<ScrollRestoration />*/}
         {children}
       <Tooltip />
       <Toaster />

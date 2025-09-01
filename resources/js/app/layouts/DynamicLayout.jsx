@@ -13,7 +13,7 @@ const themeLayouts = {
   sideblock: lazy(() => import("./Sideblock")),
 };
 
-export function DynamicLayout() {
+export function DynamicLayout({children}) {
   const { themeLayout } = useThemeContext();
 
   const CurrentLayout = useMemo(
@@ -21,5 +21,5 @@ export function DynamicLayout() {
     [themeLayout],
   );
 
-  return <CurrentLayout />;
+    return <CurrentLayout >{children}</CurrentLayout>;
 }

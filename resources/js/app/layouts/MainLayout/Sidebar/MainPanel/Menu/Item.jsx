@@ -1,7 +1,6 @@
 // Import Dependencies
 import PropTypes from "prop-types";
 import clsx from "clsx";
-import { useRouteLoaderData } from "react-router";
 
 // Local Imports
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
@@ -21,7 +20,9 @@ export function Item({
 }) {
   const Element = component || "button";
   const { lgAndUp } = useBreakpointsContext();
-  const info = useRouteLoaderData("root")?.[id]?.info;
+  // For now, we'll remove the info functionality that relied on useRouteLoaderData
+  // This would need to be replaced with props or context in Inertia.js
+  const info = null;
 
   return (
     <Element
